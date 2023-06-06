@@ -20,34 +20,34 @@ if ($qrContent) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#2553b8" />
+    <meta name="theme-color" content="#ffd5c9" />
     <title>Brosasia QR Code Generator</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <p id="logo">&#10045;</p>
 <h1 id="title">QR Generator</h1>
-<p id="description">Register and start tracking your personal fitness journey.</p>
+<p id="description">Start generating QR codes :)</p>
 <form id="survey-form" method="post" action=''>
     <fieldset>
         <h2>Information</h2>
-        <label for="content" id="name-label">
+        <label for="content">
             Content*
             <input
                     id="content"
                     name="name"
                     type="text"
-                    placeholder="Enter your name"
+                    placeholder="Enter content"
                     required
             />
         </label>
-        <label for="filename" id="email-label">
+        <label for="filename">
             Filename
             <input
                     id="filename"
                     name="email"
-                    type="email"
-                    placeholder="Enter your email"
+                    type="text"
+                    placeholder="Enter file name"
             />
         </label>
     </fieldset>
@@ -61,7 +61,7 @@ if ($qrContent) {
         </fieldset>
     <?php } ?>
 
-    <input id="submit" type="submit" value="Submit" />
+    <input id="submit" type="submit" value="SUBMIT" />
 </form>
 <p id="footer">Made with &#x2661; by Dev Team</p>
 </body>

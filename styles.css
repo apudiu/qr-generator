@@ -22,19 +22,19 @@ p[id="logo"] {
 
 h1 {
     color: #fff;
-    font-family: Didot;
+    font-family: Didot, 'sans-serif';
     font-size: 60px;
 }
 
 p[id="description"] {
-    font-family: Didot;
+    font-family: Didot, 'sans-serif';
     font-size: 18px;
     font-style: italic;
     margin: -40px 0 40px 0;
 }
 
 h2 {
-    font-family: Didot;
+    font-family: Didot, 'sans-serif';
 }
 
 hr {
@@ -80,7 +80,7 @@ select {
 input, textarea {
     background-color: #fff;
     border: 1px solid #fff;
-    color: #a39e9d;
+    /*color: #a39e9d;*/
 }
 
 .inline {
@@ -110,12 +110,16 @@ input[type="submit"] {
     width: 60%;
     margin: 1em auto;
     height: 2em;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     background-color: #e3baaf;
     border-color: #e3baaf;
     min-width: 300px;
     color: #fff;
-    font-family: Didot;
+    font-weight: bold;
+    font-family: Didot, 'sans-serif';
+}
+input[type="submit"]:hover {
+    cursor: pointer;
 }
 
 a:link {
