@@ -122,6 +122,19 @@ input[type="submit"]:hover {
     cursor: pointer;
 }
 
+code {
+    background-color: #fbece9;
+    padding: 3px;
+    color: #cc6549;
+    font-size: 13px;
+    border: 1px solid #ce9889;
+    border-radius: 4px;
+}
+
+.qr-img {
+    max-width: 100%;
+}
+
 a:link {
     color: #e3baaf;
 }

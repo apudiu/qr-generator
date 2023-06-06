@@ -10,7 +10,7 @@ class QrGenerator
 
     public function __construct(
         public string      $content,
-        public string|null $fileName = null
+        public string $fileName = 'qrcode'
     )
     {
     }

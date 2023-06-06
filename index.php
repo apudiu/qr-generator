@@ -10,11 +10,13 @@ $qrFilename = $_GET['filename'] ?? null;
 $filename = null;
 if ($qrContent) {
 
-    $g = new QrGenerator($qrContent, $qrFilename);
-    $filename = $g->generate();
+    $g = $qrFilename
+        ? new QrGenerator($qrContent, $qrFilename)
+        : new QrGenerator($qrContent);
 
-    die(var_dump($qrContent, $filename));
+    $filename = $g->generate();
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -53,17 +55,23 @@ if ($qrContent) {
             />
         </label>
     </fieldset>
+
+    <input id="submit" type="submit" value="SUBMIT" />
+
     <?php if ($filename) { ?>
         <fieldset>
             <h2>Generated Image</h2>
             <p>For <code><?php echo $qrContent ?></code></p>
             <p>Right click & save image</p>
 
-            <img src="<?php echo $filename ?>" alt="QR code for <?php echo $qrContent ?>">
+            <img
+                    class="qr-img"
+                    src="<?php echo $filename ?>"
+                    alt="QR code for <?php echo $qrContent ?>"
+            />
         </fieldset>
     <?php } ?>
 
-    <input id="submit" type="submit" value="SUBMIT" />
 </form>
 <p id="footer">Made with ❤️ by DevTeam</p>
 </body>
