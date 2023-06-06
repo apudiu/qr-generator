@@ -42,7 +42,7 @@ class QrGenerator
         $prefix .= strftime('%F %T', $_SERVER['REQUEST_TIME']);
         $prefix .= ']';
 
-        $line = "{$prefix} {$data}" . PHP_EOL;
+        $line = trim("{$prefix} {$data}").PHP_EOL;
 
         file_put_contents($logFile, $line, FILE_APPEND);
     }
