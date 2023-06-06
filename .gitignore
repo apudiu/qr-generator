@@ -79,3 +79,4 @@ fabric.properties
 
 qrs/*
 qrgen.log
+.vscode

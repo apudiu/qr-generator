@@ -4,9 +4,15 @@ use Snebtaf\QrGenerator;
 
 require_once 'vendor/autoload.php';
 
-$g = new QrGenerator('http://google.com');
-$g->generate();
+$qrContent = $_GET['content'] ?? null;
+$qrFilename = $_GET['filename'] ?? null;
 
+$filename = null;
+if ($qrContent) {
+
+    $g = new QrGenerator($qrContent, $qrFilename);
+    $filename = $g->generate();
+}
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +32,7 @@ $g->generate();
     <fieldset>
         <h2>Information</h2>
         <label for="content" id="name-label">
-            Name
+            Content*
             <input
                     id="content"
                     name="name"
@@ -36,21 +42,24 @@ $g->generate();
             />
         </label>
         <label for="filename" id="email-label">
-            Email
+            Filename
             <input
                     id="filename"
                     name="email"
                     type="email"
                     placeholder="Enter your email"
-                    required
             />
         </label>
     </fieldset>
-    <fieldset>
-        <h2>Where do you start?</h2>
-        <p>How would you describe your skill level?</p>
+    <?php if ($filename) { ?>
+        <fieldset>
+            <h2>Generated Image</h2>
+            <p>For <code><?php echo $qrContent ?></code></p>
+            <p>Right click & save image</p>
 
-    </fieldset>
+            <img src="<?php echo $filename ?>" alt="QR code for <?php echo $qrContent ?>">
+        </fieldset>
+    <?php } ?>
 
     <input id="submit" type="submit" value="Submit" />
 </form>
