@@ -6,6 +6,8 @@ use Exception;
 
 class QrGenerator
 {
+    private string $lastGeneratedFileName;
+
     public function __construct(
         public string      $content,
         public string|null $fileName = null
@@ -19,6 +21,8 @@ class QrGenerator
 
             $cmdFile = __DIR__ . '/../mqr.sh';
             $filename = shell_exec("$cmdFile {$this->fileName} $this->content");
+
+            $this->lastGeneratedFileName = $filename;
 
             $this->logGeneration();
 
@@ -51,7 +55,10 @@ class QrGenerator
         $l.= $_SERVER['REMOTE_ADDR'] ?? 'no_addr';
         $l.= ':';
         $l.= $_SERVER['REMOTE_PORT'] ?? 0;
+        $l.= ' ';
         $l.= $_REQUEST['content'] ?? '-';
+        $l.= ' ';
+        $l.= $this->lastGeneratedFileName;
         $l.= ' ';
 
         if ($e !== null) {

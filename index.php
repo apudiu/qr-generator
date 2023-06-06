@@ -12,6 +12,8 @@ if ($qrContent) {
 
     $g = new QrGenerator($qrContent, $qrFilename);
     $filename = $g->generate();
+
+    die(var_dump($qrContent, $filename));
 }
 ?>
 
@@ -28,14 +30,14 @@ if ($qrContent) {
 <p id="logo">&#10045;</p>
 <h1 id="title">QR Generator</h1>
 <p id="description">Start generating QR codes :)</p>
-<form id="survey-form" method="post" action=''>
+<form>
     <fieldset>
         <h2>Information</h2>
         <label for="content">
             Content*
             <input
                     id="content"
-                    name="name"
+                    name="content"
                     type="text"
                     placeholder="Enter content"
                     required
@@ -45,7 +47,7 @@ if ($qrContent) {
             Filename
             <input
                     id="filename"
-                    name="email"
+                    name="filename"
                     type="text"
                     placeholder="Enter file name"
             />
@@ -63,6 +65,6 @@ if ($qrContent) {
 
     <input id="submit" type="submit" value="SUBMIT" />
 </form>
-<p id="footer">Made with &#x2661; by Dev Team</p>
+<p id="footer">Made with ❤️ by DevTeam</p>
 </body>
 </html>
