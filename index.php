@@ -29,7 +29,9 @@ if ($qrContent) {
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<p id="logo">&#10045;</p>
+<p id="logo">
+    <a href="/">&#10045;</a>
+</p>
 <h1 id="title">QR Generator</h1>
 <p id="description">Start generating QR codes :)</p>
 <form>
