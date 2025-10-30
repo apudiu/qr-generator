@@ -53,7 +53,7 @@ if ($qrContent) {
                     id="filename"
                     name="filename"
                     type="text"
-                    placeholder="Enter file name"
+                    placeholder="Enter file name (without extension)"
             />
         </label>
     </fieldset>

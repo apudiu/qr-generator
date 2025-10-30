@@ -7,7 +7,7 @@ No security practices considered!
 
 1. Start server
     1. On Bare Metal
-        1. Make sure PHP 8.0 and Composer is available
+        1. Make sure `PHP 8.0` and `Composer` is available
         2. Make sure your system have `qrencode` installed
         3. Navigate to project root and run `composer start`
       

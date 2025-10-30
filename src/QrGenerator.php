@@ -13,6 +13,7 @@ class QrGenerator
         public string $fileName = 'qrcode'
     )
     {
+        //
     }
 
     public function generate(): string|bool
