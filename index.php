@@ -33,7 +33,7 @@ if ($qrContent) {
     <a href="/">&#10045;</a>
 </p>
 <h1 id="title">QR Generator</h1>
-<p id="description">Start generating QR codes :)</p>
+<p id="description">Start generating QR codes 🙂</p>
 <form>
     <fieldset>
         <h2>Information</h2>
