@@ -2,3 +2,4 @@
 qrs/*
 qrgen.log
 .vscode
+vendor/

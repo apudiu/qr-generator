@@ -22,7 +22,6 @@ class ComposerStaticInit0ecb3e7cff85f4d130c158901fa433ba
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'Snebtaf\\QrGenerator' => __DIR__ . '/../..' . '/src/QrGenerator.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
